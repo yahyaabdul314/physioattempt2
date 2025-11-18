@@ -16,6 +16,7 @@
     "react-dom": "^18.3.1",
     "@react-three/fiber": "^8.15.12",
     "@react-three/drei": "^9.92.7",
+    "@react-three/xr": "^6.2.3",
     "three": "^0.160.0",
     "zustand": "^4.4.7"
   },
