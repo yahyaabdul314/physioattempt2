@@ -52,7 +52,7 @@ export const Approach: React.FC = () => {
             letterSpacing: '-0.02em'
           }}>
             Our <span style={{
-              color: '#0066CC'
+              color: '#6B9080'
             }}>Methodology</span>
           </h2>
           <p style={{
@@ -89,8 +89,8 @@ export const Approach: React.FC = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateX(8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 102, 204, 0.15)';
-                e.currentTarget.style.borderColor = '#0066CC';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(107, 144, 128, 0.15)';
+                e.currentTarget.style.borderColor = '#6B9080';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateX(0)';
@@ -112,7 +112,7 @@ export const Approach: React.FC = () => {
                 <div style={{
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  color: '#0066CC',
+                  color: '#6B9080',
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                 }}>
                   {step.number}
@@ -144,7 +144,7 @@ export const Approach: React.FC = () => {
         <div style={{
           marginTop: '5rem',
           padding: '3rem',
-          background: '#0066CC',
+          background: '#6B9080',
           borderRadius: '24px',
           textAlign: 'center',
           color: 'white'

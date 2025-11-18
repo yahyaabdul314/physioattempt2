@@ -50,7 +50,7 @@ export const Contact: React.FC = () => {
             letterSpacing: '-0.02em'
           }}>
             Get In <span style={{
-              color: '#0066CC'
+              color: '#6B9080'
             }}>Touch</span>
           </h2>
           <p style={{
@@ -114,7 +114,7 @@ export const Contact: React.FC = () => {
                     width: '48px',
                     height: '48px',
                     borderRadius: '12px',
-                    background: '#0066CC',
+                    background: '#6B9080',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -148,7 +148,7 @@ export const Contact: React.FC = () => {
                     width: '48px',
                     height: '48px',
                     borderRadius: '12px',
-                    background: '#0066CC',
+                    background: '#6B9080',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -182,7 +182,7 @@ export const Contact: React.FC = () => {
                     width: '48px',
                     height: '48px',
                     borderRadius: '12px',
-                    background: '#0066CC',
+                    background: '#6B9080',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -312,7 +312,7 @@ export const Contact: React.FC = () => {
                       transition: 'all 0.2s'
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#0066CC';
+                      e.currentTarget.style.borderColor = '#6B9080';
                       e.currentTarget.style.backgroundColor = 'white';
                     }}
                     onBlur={(e) => {
@@ -352,7 +352,7 @@ export const Contact: React.FC = () => {
                       transition: 'all 0.2s'
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#0066CC';
+                      e.currentTarget.style.borderColor = '#6B9080';
                       e.currentTarget.style.backgroundColor = 'white';
                     }}
                     onBlur={(e) => {
@@ -391,7 +391,7 @@ export const Contact: React.FC = () => {
                       transition: 'all 0.2s'
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#0066CC';
+                      e.currentTarget.style.borderColor = '#6B9080';
                       e.currentTarget.style.backgroundColor = 'white';
                     }}
                     onBlur={(e) => {
@@ -432,7 +432,7 @@ export const Contact: React.FC = () => {
                       transition: 'all 0.2s'
                     }}
                     onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#0066CC';
+                      e.currentTarget.style.borderColor = '#6B9080';
                       e.currentTarget.style.backgroundColor = 'white';
                     }}
                     onBlur={(e) => {
@@ -447,7 +447,7 @@ export const Contact: React.FC = () => {
                   style={{
                     width: '100%',
                     padding: '1rem',
-                    background: '#0066CC',
+                    background: '#6B9080',
                     color: 'white',
                     border: 'none',
                     borderRadius: '12px',
@@ -456,17 +456,17 @@ export const Contact: React.FC = () => {
                     fontWeight: 600,
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     transition: 'all 0.3s',
-                    boxShadow: '0 10px 30px rgba(0, 102, 204, 0.3)'
+                    boxShadow: '0 10px 30px rgba(107, 144, 128, 0.3)'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.backgroundColor = '#0052A3';
-                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(0, 102, 204, 0.4)';
+                    e.currentTarget.style.backgroundColor = '#5A7C6F';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(107, 144, 128, 0.4)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.backgroundColor = '#0066CC';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 102, 204, 0.3)';
+                    e.currentTarget.style.backgroundColor = '#6B9080';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(107, 144, 128, 0.3)';
                   }}
                 >
                   Send Message

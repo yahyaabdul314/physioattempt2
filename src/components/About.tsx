@@ -48,7 +48,7 @@ export const About: React.FC = () => {
             letterSpacing: '-0.02em'
           }}>
             About <span style={{
-              color: '#0066CC'
+              color: '#6B9080'
             }}>NeuroRecover VR</span>
           </h2>
           <p style={{
@@ -83,8 +83,8 @@ export const About: React.FC = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 102, 204, 0.15)';
-                e.currentTarget.style.borderColor = '#0066CC';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(107, 144, 128, 0.15)';
+                e.currentTarget.style.borderColor = '#6B9080';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';

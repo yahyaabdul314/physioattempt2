@@ -6,42 +6,42 @@ export const Features: React.FC = () => {
       icon: '👁️',
       title: 'Oculomotor Assessment',
       description: 'Comprehensive testing of smooth pursuits, saccades, convergence, and vestibulo-ocular reflex function with real-time tracking.',
-      gradient: '#0066CC',
+      gradient: '#6B9080',
       details: ['Real-time eye tracking', 'Automated symptom recording', 'Baseline comparison analytics']
     },
     {
       icon: '⚖️',
       title: 'Vestibular Rehabilitation',
       description: 'Evidence-based exercises for balance, gaze stabilization, and spatial orientation recovery in immersive environments.',
-      gradient: '#00897B',
+      gradient: '#7FA99B',
       details: ['Dynamic visual acuity', 'Gaze stabilization', 'Balance training modules']
     },
     {
       icon: '📈',
       title: 'Progress Analytics',
       description: 'Detailed tracking and visualization of recovery metrics with exportable clinical reports for healthcare providers.',
-      gradient: '#0096C7',
+      gradient: '#8FAE92',
       details: ['Session tracking', 'Symptom trend analysis', 'Clinical report generation']
     },
     {
       icon: '🎮',
       title: 'Immersive VR Therapy',
       description: 'Engaging virtual environments make rehabilitation exercises more enjoyable and clinically effective.',
-      gradient: '#43A047',
+      gradient: '#9FAC8E',
       details: ['WebXR compatibility', 'Adjustable difficulty', 'Safe virtual environments']
     },
     {
       icon: '🔐',
       title: 'HIPAA Compliant',
       description: 'Enterprise-grade security with encrypted data storage ensuring complete patient privacy and regulatory compliance.',
-      gradient: '#FB8C00',
+      gradient: '#A8937B',
       details: ['Encrypted storage', 'Secure authentication', 'Privacy-first design']
     },
     {
       icon: '🌐',
       title: 'Web-Based Platform',
       description: 'No downloads required. Instant access from any VR-capable device with a modern web browser.',
-      gradient: '#5E35B1',
+      gradient: '#8B9A9C',
       details: ['Cross-platform support', 'Instant accessibility', 'Regular updates']
     }
   ];
@@ -70,7 +70,7 @@ export const Features: React.FC = () => {
             letterSpacing: '-0.02em'
           }}>
             Platform <span style={{
-              color: '#0066CC'
+              color: '#6B9080'
             }}>Features</span>
           </h2>
           <p style={{
@@ -107,7 +107,7 @@ export const Features: React.FC = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-12px)';
-                e.currentTarget.style.boxShadow = '0 25px 50px rgba(0, 102, 204, 0.2)';
+                e.currentTarget.style.boxShadow = '0 25px 50px rgba(107, 144, 128, 0.2)';
                 e.currentTarget.style.borderColor = 'transparent';
               }}
               onMouseLeave={(e) => {
@@ -161,7 +161,7 @@ export const Features: React.FC = () => {
                     key={idx}
                     style={{
                       fontSize: '0.95rem',
-                      color: '#0066CC',
+                      color: '#6B9080',
                       fontWeight: 500,
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       paddingLeft: '1.5rem',
@@ -218,7 +218,7 @@ export const Features: React.FC = () => {
               <div style={{
                 fontSize: '2.5rem',
                 fontWeight: 800,
-                color: '#0066CC',
+                color: '#6B9080',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 marginBottom: '0.5rem'
               }}>VOMS</div>
@@ -233,7 +233,7 @@ export const Features: React.FC = () => {
               <div style={{
                 fontSize: '2.5rem',
                 fontWeight: 800,
-                color: '#0066CC',
+                color: '#6B9080',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 marginBottom: '0.5rem'
               }}>King-Devick</div>
@@ -248,7 +248,7 @@ export const Features: React.FC = () => {
               <div style={{
                 fontSize: '2.5rem',
                 fontWeight: 800,
-                color: '#0066CC',
+                color: '#6B9080',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 marginBottom: '0.5rem'
               }}>WebXR</div>
