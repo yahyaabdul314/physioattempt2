@@ -5,10 +5,9 @@ export const Footer: React.FC = () => {
 
   return (
     <footer style={{
-      backgroundColor: '#0a0a0a',
-      borderTop: '1px solid #2266cc',
-      padding: '3rem 2rem 2rem',
-      fontFamily: 'monospace'
+      backgroundColor: '#1E293B',
+      padding: '4rem 2rem 2rem',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -23,59 +22,100 @@ export const Footer: React.FC = () => {
           {/* About Column */}
           <div>
             <h3 style={{
-              fontSize: '1.25rem',
-              color: '#4488ff',
-              marginBottom: '1rem',
-              fontWeight: 'bold'
+              fontSize: '1.5rem',
+              fontWeight: 700,
+              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              marginBottom: '1rem'
             }}>
               NeuroRecover VR
             </h3>
             <p style={{
               fontSize: '0.95rem',
-              color: '#b0b0b0',
+              color: '#94A3B8',
               lineHeight: '1.7',
-              marginBottom: '1rem'
+              marginBottom: '1.5rem'
             }}>
-              Revolutionizing concussion recovery through evidence-based virtual reality rehabilitation.
+              Transforming concussion recovery through evidence-based virtual reality rehabilitation.
             </p>
             <div style={{
               display: 'flex',
-              gap: '1rem',
-              marginTop: '1.5rem'
+              gap: '1rem'
             }}>
               <a
                 href="#"
                 style={{
-                  color: '#4488ff',
-                  fontSize: '1.5rem',
-                  transition: 'color 0.2s'
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.25rem',
+                  transition: 'all 0.3s',
+                  textDecoration: 'none'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#66aaff'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#4488ff'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 🐦
               </a>
               <a
                 href="#"
                 style={{
-                  color: '#4488ff',
-                  fontSize: '1.5rem',
-                  transition: 'color 0.2s'
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.25rem',
+                  transition: 'all 0.3s',
+                  textDecoration: 'none'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#66aaff'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#4488ff'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 💼
               </a>
               <a
                 href="#"
                 style={{
-                  color: '#4488ff',
-                  fontSize: '1.5rem',
-                  transition: 'color 0.2s'
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.25rem',
+                  transition: 'all 0.3s',
+                  textDecoration: 'none'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#66aaff'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#4488ff'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
                 📘
               </a>
@@ -86,19 +126,22 @@ export const Footer: React.FC = () => {
           <div>
             <h3 style={{
               fontSize: '1.1rem',
-              color: '#e0e0e0',
+              color: 'white',
               marginBottom: '1rem',
-              fontWeight: 'bold'
+              fontWeight: 700
             }}>
               Quick Links
             </h3>
             <ul style={{
               listStyle: 'none',
               padding: 0,
-              margin: 0
+              margin: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.75rem'
             }}>
               {['About', 'Approach', 'Features', 'Contact'].map((link) => (
-                <li key={link} style={{ marginBottom: '0.75rem' }}>
+                <li key={link}>
                   <button
                     onClick={() => {
                       const element = document.getElementById(link.toLowerCase());
@@ -107,15 +150,15 @@ export const Footer: React.FC = () => {
                     style={{
                       background: 'none',
                       border: 'none',
-                      color: '#b0b0b0',
+                      color: '#94A3B8',
                       cursor: 'pointer',
                       fontSize: '0.95rem',
                       padding: 0,
                       transition: 'color 0.2s',
-                      fontFamily: 'monospace'
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#4488ff'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = '#b0b0b0'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94A3B8'}
                   >
                     {link}
                   </button>
@@ -128,29 +171,32 @@ export const Footer: React.FC = () => {
           <div>
             <h3 style={{
               fontSize: '1.1rem',
-              color: '#e0e0e0',
+              color: 'white',
               marginBottom: '1rem',
-              fontWeight: 'bold'
+              fontWeight: 700
             }}>
               Resources
             </h3>
             <ul style={{
               listStyle: 'none',
               padding: 0,
-              margin: 0
+              margin: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.75rem'
             }}>
-              {['Clinical Research', 'User Guide', 'FAQ', 'Support'].map((link) => (
-                <li key={link} style={{ marginBottom: '0.75rem' }}>
+              {['Clinical Research', 'Documentation', 'FAQ', 'Support'].map((link) => (
+                <li key={link}>
                   <a
                     href="#"
                     style={{
-                      color: '#b0b0b0',
+                      color: '#94A3B8',
                       textDecoration: 'none',
                       fontSize: '0.95rem',
                       transition: 'color 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#4488ff'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = '#b0b0b0'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94A3B8'}
                   >
                     {link}
                   </a>
@@ -163,29 +209,32 @@ export const Footer: React.FC = () => {
           <div>
             <h3 style={{
               fontSize: '1.1rem',
-              color: '#e0e0e0',
+              color: 'white',
               marginBottom: '1rem',
-              fontWeight: 'bold'
+              fontWeight: 700
             }}>
-              Legal
+              Legal & Compliance
             </h3>
             <ul style={{
               listStyle: 'none',
               padding: 0,
-              margin: 0
+              margin: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.75rem'
             }}>
               {['Privacy Policy', 'Terms of Service', 'HIPAA Compliance', 'Accessibility'].map((link) => (
-                <li key={link} style={{ marginBottom: '0.75rem' }}>
+                <li key={link}>
                   <a
                     href="#"
                     style={{
-                      color: '#b0b0b0',
+                      color: '#94A3B8',
                       textDecoration: 'none',
                       fontSize: '0.95rem',
                       transition: 'color 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#4488ff'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = '#b0b0b0'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94A3B8'}
                   >
                     {link}
                   </a>
@@ -197,26 +246,27 @@ export const Footer: React.FC = () => {
 
         {/* Disclaimer */}
         <div style={{
-          borderTop: '1px solid #2266cc',
+          borderTop: '1px solid #334155',
           paddingTop: '2rem',
           marginTop: '2rem'
         }}>
           <div style={{
-            backgroundColor: '#1a1a2e',
+            backgroundColor: '#0F172A',
             padding: '1.5rem',
-            borderRadius: '4px',
+            borderRadius: '16px',
+            border: '1px solid #334155',
             marginBottom: '2rem'
           }}>
             <p style={{
               fontSize: '0.85rem',
-              color: '#88aaff',
-              lineHeight: '1.6',
+              color: '#94A3B8',
+              lineHeight: '1.7',
               margin: 0
             }}>
-              <strong>Clinical Disclaimer:</strong> This platform is designed to supplement, not replace,
+              <strong style={{ color: '#3B82F6' }}>Clinical Disclaimer:</strong> This platform is designed to supplement, not replace,
               professional medical care. VR-based assessments should be conducted under the guidance of
-              qualified healthcare providers. Not all users may be suitable for VR therapy. Consult with
-              your healthcare provider before beginning any rehabilitation program.
+              qualified healthcare providers. Not all users may be suitable for VR therapy. Always consult
+              with your healthcare provider before beginning any rehabilitation program.
             </p>
           </div>
 
@@ -230,17 +280,27 @@ export const Footer: React.FC = () => {
           }}>
             <p style={{
               fontSize: '0.9rem',
-              color: '#b0b0b0',
+              color: '#64748B',
               margin: 0
             }}>
               © {currentYear} NeuroRecover VR. All rights reserved.
             </p>
             <p style={{
               fontSize: '0.9rem',
-              color: '#b0b0b0',
-              margin: 0
+              color: '#64748B',
+              margin: 0,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
             }}>
-              Built with React + Three.js + WebXR
+              <span>Built with</span>
+              <span style={{
+                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontWeight: 600
+              }}>React + Three.js + WebXR</span>
             </p>
           </div>
         </div>

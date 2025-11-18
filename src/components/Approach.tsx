@@ -1,6 +1,33 @@
 import React from 'react';
 
 export const Approach: React.FC = () => {
+  const steps = [
+    {
+      number: '01',
+      title: 'Initial Assessment',
+      description: 'Comprehensive VOMS testing establishes baseline measurements for vestibular and oculomotor function, including smooth pursuits, saccades, and VOR assessments.',
+      icon: '📋'
+    },
+    {
+      number: '02',
+      title: 'Personalized Protocol',
+      description: 'AI-powered analysis generates customized recovery protocols based on assessment results, symptom patterns, and individual patient needs.',
+      icon: '🎯'
+    },
+    {
+      number: '03',
+      title: 'VR Rehabilitation',
+      description: 'Immersive therapy sessions target specific deficits with gaze stabilization, balance training, and progressive difficulty adaptation.',
+      icon: '🥽'
+    },
+    {
+      number: '04',
+      title: 'Progress Monitoring',
+      description: 'Real-time analytics track improvements, inform treatment adjustments, and guide return-to-activity decisions with clinical precision.',
+      icon: '📊'
+    }
+  ];
+
   return (
     <section id="approach" style={{
       minHeight: '100vh',
@@ -8,317 +35,192 @@ export const Approach: React.FC = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       padding: '6rem 2rem',
-      backgroundColor: '#1a1a2e'
+      backgroundColor: '#F8FAFC'
     }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',
         width: '100%'
       }}>
-        <h2 style={{
-          fontSize: '3rem',
-          fontWeight: 'bold',
-          color: '#e0e0e0',
-          marginBottom: '3rem',
-          fontFamily: 'monospace',
-          textAlign: 'center'
-        }}>
-          Our <span style={{ color: '#4488ff' }}>Approach</span>
-        </h2>
-
-        <p style={{
-          fontSize: '1.25rem',
-          color: '#b0b0b0',
-          lineHeight: '1.8',
-          fontFamily: 'monospace',
-          textAlign: 'center',
-          marginBottom: '4rem',
-          maxWidth: '800px',
-          margin: '0 auto 4rem'
-        }}>
-          Our methodology combines established clinical protocols with innovative VR technology
-          to deliver a comprehensive, patient-centered recovery experience.
-        </p>
-
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '2rem'
-        }}>
-          {/* Step 1 */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'auto 1fr',
-            gap: '2rem',
-            backgroundColor: '#0a0a0a',
-            padding: '2rem',
-            borderRadius: '8px',
-            border: '1px solid #2266cc',
-            alignItems: 'center'
+        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+          <h2 style={{
+            fontSize: '3rem',
+            fontWeight: 800,
+            color: '#1E293B',
+            marginBottom: '1rem',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            letterSpacing: '-0.02em'
           }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              borderRadius: '50%',
-              backgroundColor: '#2266cc',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              color: 'white',
-              fontFamily: 'monospace',
-              flexShrink: 0
-            }}>
-              1
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                color: '#4488ff',
-                marginBottom: '0.75rem',
-                fontFamily: 'monospace'
-              }}>
-                Initial Assessment
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                color: '#b0b0b0',
-                lineHeight: '1.7',
-                fontFamily: 'monospace'
-              }}>
-                Patients complete standardized VOMS (Vestibular/Ocular Motor Screening) assessments
-                to establish baseline measurements. This includes smooth pursuit tracking, saccadic
-                movements, and vestibulo-ocular reflex testing.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 2 */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'auto 1fr',
-            gap: '2rem',
-            backgroundColor: '#0a0a0a',
-            padding: '2rem',
-            borderRadius: '8px',
-            border: '1px solid #2266cc',
-            alignItems: 'center'
+            Our <span style={{
+              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Methodology</span>
+          </h2>
+          <p style={{
+            fontSize: '1.15rem',
+            color: '#64748B',
+            maxWidth: '700px',
+            margin: '0 auto',
+            lineHeight: '1.8',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
           }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              borderRadius: '50%',
-              backgroundColor: '#2266cc',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              color: 'white',
-              fontFamily: 'monospace',
-              flexShrink: 0
-            }}>
-              2
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                color: '#4488ff',
-                marginBottom: '0.75rem',
-                fontFamily: 'monospace'
-              }}>
-                Personalized Protocol
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                color: '#b0b0b0',
-                lineHeight: '1.7',
-                fontFamily: 'monospace'
-              }}>
-                Based on assessment results, our system generates a customized recovery protocol
-                tailored to each patient's specific deficits and symptoms. Protocols adapt in
-                real-time based on patient response and symptom reporting.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'auto 1fr',
-            gap: '2rem',
-            backgroundColor: '#0a0a0a',
-            padding: '2rem',
-            borderRadius: '8px',
-            border: '1px solid #2266cc',
-            alignItems: 'center'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              borderRadius: '50%',
-              backgroundColor: '#2266cc',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              color: 'white',
-              fontFamily: 'monospace',
-              flexShrink: 0
-            }}>
-              3
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                color: '#4488ff',
-                marginBottom: '0.75rem',
-                fontFamily: 'monospace'
-              }}>
-                VR Rehabilitation
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                color: '#b0b0b0',
-                lineHeight: '1.7',
-                fontFamily: 'monospace'
-              }}>
-                Patients engage in immersive VR therapy sessions targeting vestibular and oculomotor
-                function. Exercises include gaze stabilization, dynamic visual acuity training, and
-                balance rehabilitation in safe, controlled virtual environments.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 4 */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'auto 1fr',
-            gap: '2rem',
-            backgroundColor: '#0a0a0a',
-            padding: '2rem',
-            borderRadius: '8px',
-            border: '1px solid #2266cc',
-            alignItems: 'center'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              borderRadius: '50%',
-              backgroundColor: '#2266cc',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              color: 'white',
-              fontFamily: 'monospace',
-              flexShrink: 0
-            }}>
-              4
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                color: '#4488ff',
-                marginBottom: '0.75rem',
-                fontFamily: 'monospace'
-              }}>
-                Progress Monitoring
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                color: '#b0b0b0',
-                lineHeight: '1.7',
-                fontFamily: 'monospace'
-              }}>
-                Continuous data collection tracks improvements in oculomotor function, symptom severity,
-                and overall recovery progress. Clinicians receive detailed analytics to inform treatment
-                adjustments and return-to-activity decisions.
-              </p>
-            </div>
-          </div>
+            A systematic, evidence-based approach combining clinical protocols
+            with cutting-edge VR technology for optimal recovery outcomes.
+          </p>
         </div>
 
-        {/* Clinical Foundation */}
         <div style={{
-          marginTop: '4rem',
-          padding: '2rem',
-          backgroundColor: '#0a0a0a',
-          borderRadius: '8px',
-          border: '1px solid #2266cc'
+          display: 'grid',
+          gap: '2rem'
+        }}>
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: 'white',
+                padding: '2.5rem',
+                borderRadius: '20px',
+                border: '1px solid #E2E8F0',
+                display: 'grid',
+                gridTemplateColumns: 'auto 1fr',
+                gap: '2rem',
+                alignItems: 'start',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateX(8px)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(59, 130, 246, 0.15)';
+                e.currentTarget.style.borderColor = '#3B82F6';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateX(0)';
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.borderColor = '#E2E8F0';
+              }}
+            >
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '1rem'
+              }}>
+                <div style={{
+                  fontSize: '2.5rem'
+                }}>
+                  {step.icon}
+                </div>
+                <div style={{
+                  fontSize: '1.5rem',
+                  fontWeight: 700,
+                  color: '#3B82F6',
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                }}>
+                  {step.number}
+                </div>
+              </div>
+              <div>
+                <h3 style={{
+                  fontSize: '1.75rem',
+                  color: '#1E293B',
+                  marginBottom: '0.75rem',
+                  fontWeight: 700,
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                }}>
+                  {step.title}
+                </h3>
+                <p style={{
+                  fontSize: '1.05rem',
+                  color: '#64748B',
+                  lineHeight: '1.8',
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                }}>
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{
+          marginTop: '5rem',
+          padding: '3rem',
+          background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+          borderRadius: '24px',
+          textAlign: 'center',
+          color: 'white'
         }}>
           <h3 style={{
-            fontSize: '1.75rem',
-            color: '#e0e0e0',
+            fontSize: '2rem',
+            fontWeight: 800,
             marginBottom: '1.5rem',
-            fontFamily: 'monospace',
-            textAlign: 'center'
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
           }}>
             Clinical Foundation
           </h3>
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '2rem'
+            gap: '2.5rem',
+            marginTop: '2rem'
           }}>
             <div>
               <h4 style={{
-                fontSize: '1.25rem',
-                color: '#4488ff',
+                fontSize: '1.4rem',
+                fontWeight: 700,
                 marginBottom: '0.75rem',
-                fontFamily: 'monospace'
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                VOMS Assessment
+                VOMS Protocol
               </h4>
               <p style={{
                 fontSize: '1rem',
-                color: '#b0b0b0',
-                fontFamily: 'monospace',
-                lineHeight: '1.6'
+                opacity: 0.95,
+                lineHeight: '1.7',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                Validated screening tool for vestibular and oculomotor impairments
-                following concussion, used by healthcare professionals worldwide.
+                Validated screening tool for vestibular and oculomotor impairments,
+                used by healthcare professionals worldwide.
               </p>
             </div>
             <div>
               <h4 style={{
-                fontSize: '1.25rem',
-                color: '#4488ff',
+                fontSize: '1.4rem',
+                fontWeight: 700,
                 marginBottom: '0.75rem',
-                fontFamily: 'monospace'
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
                 King-Devick Test
               </h4>
               <p style={{
                 fontSize: '1rem',
-                color: '#b0b0b0',
-                fontFamily: 'monospace',
-                lineHeight: '1.6'
+                opacity: 0.95,
+                lineHeight: '1.7',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                Rapid number naming test that assesses saccadic eye movements
-                and attention, proven to identify concussion-related deficits.
+                Rapid assessment of saccadic eye movements with 95.8% sensitivity
+                for concussion-related deficits.
               </p>
             </div>
             <div>
               <h4 style={{
-                fontSize: '1.25rem',
-                color: '#4488ff',
+                fontSize: '1.4rem',
+                fontWeight: 700,
                 marginBottom: '0.75rem',
-                fontFamily: 'monospace'
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                VR Therapy Protocols
+                VR Therapy
               </h4>
               <p style={{
                 fontSize: '1rem',
-                color: '#b0b0b0',
-                fontFamily: 'monospace',
-                lineHeight: '1.6'
+                opacity: 0.95,
+                lineHeight: '1.7',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
                 Evidence-based rehabilitation exercises adapted for immersive VR,
-                providing engaging and effective therapy sessions.
+                delivering engaging and effective therapy sessions.
               </p>
             </div>
           </div>

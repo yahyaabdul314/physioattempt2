@@ -5,62 +5,44 @@ export const Features: React.FC = () => {
     {
       icon: '👁️',
       title: 'Oculomotor Assessment',
-      description: 'Comprehensive testing of smooth pursuits, saccades, convergence, and vestibulo-ocular reflex (VOR) function.',
-      details: [
-        'Real-time eye tracking',
-        'Automated symptom recording',
-        'Baseline comparison'
-      ]
+      description: 'Comprehensive testing of smooth pursuits, saccades, convergence, and vestibulo-ocular reflex function with real-time tracking.',
+      gradient: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
+      details: ['Real-time eye tracking', 'Automated symptom recording', 'Baseline comparison analytics']
     },
     {
       icon: '⚖️',
       title: 'Vestibular Rehabilitation',
-      description: 'Evidence-based exercises targeting balance, gaze stabilization, and spatial orientation recovery.',
-      details: [
-        'Dynamic visual acuity',
-        'Gaze stabilization exercises',
-        'Balance training modules'
-      ]
+      description: 'Evidence-based exercises for balance, gaze stabilization, and spatial orientation recovery in immersive environments.',
+      gradient: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
+      details: ['Dynamic visual acuity', 'Gaze stabilization', 'Balance training modules']
     },
     {
       icon: '📈',
       title: 'Progress Analytics',
-      description: 'Detailed tracking and visualization of recovery metrics over time with exportable clinical reports.',
-      details: [
-        'Session-by-session tracking',
-        'Symptom trend analysis',
-        'Clinical report generation'
-      ]
+      description: 'Detailed tracking and visualization of recovery metrics with exportable clinical reports for healthcare providers.',
+      gradient: 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)',
+      details: ['Session tracking', 'Symptom trend analysis', 'Clinical report generation']
     },
     {
       icon: '🎮',
       title: 'Immersive VR Therapy',
-      description: 'Engaging virtual environments make rehabilitation exercises more enjoyable and effective.',
-      details: [
-        'WebXR compatibility',
-        'Adjustable difficulty levels',
-        'Safe virtual environments'
-      ]
+      description: 'Engaging virtual environments make rehabilitation exercises more enjoyable and clinically effective.',
+      gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+      details: ['WebXR compatibility', 'Adjustable difficulty', 'Safe virtual environments']
     },
     {
       icon: '🔐',
       title: 'HIPAA Compliant',
-      description: 'Secure data handling and storage ensuring patient privacy and regulatory compliance.',
-      details: [
-        'Encrypted data storage',
-        'Secure authentication',
-        'Privacy-first design'
-      ]
+      description: 'Enterprise-grade security with encrypted data storage ensuring complete patient privacy and regulatory compliance.',
+      gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+      details: ['Encrypted storage', 'Secure authentication', 'Privacy-first design']
     },
     {
       icon: '🌐',
       title: 'Web-Based Platform',
-      description: 'No downloads required. Access from any VR-capable device with a web browser.',
-      details: [
-        'Cross-platform support',
-        'Instant accessibility',
-        'Regular updates'
-      ]
+      description: 'No downloads required. Instant access from any VR-capable device with a modern web browser.',
+      gradient: 'linear-gradient(135deg, #EC4899 0%, #DB2777 100%)',
+      details: ['Cross-platform support', 'Instant accessibility', 'Regular updates']
     }
   ];
 
@@ -71,36 +53,41 @@ export const Features: React.FC = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       padding: '6rem 2rem',
-      backgroundColor: '#0a0a0a'
+      backgroundColor: 'white'
     }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',
         width: '100%'
       }}>
-        <h2 style={{
-          fontSize: '3rem',
-          fontWeight: 'bold',
-          color: '#e0e0e0',
-          marginBottom: '3rem',
-          fontFamily: 'monospace',
-          textAlign: 'center'
-        }}>
-          Platform <span style={{ color: '#4488ff' }}>Features</span>
-        </h2>
-
-        <p style={{
-          fontSize: '1.25rem',
-          color: '#b0b0b0',
-          lineHeight: '1.8',
-          fontFamily: 'monospace',
-          textAlign: 'center',
-          marginBottom: '4rem',
-          maxWidth: '800px',
-          margin: '0 auto 4rem'
-        }}>
-          A comprehensive suite of tools designed for effective concussion assessment and rehabilitation.
-        </p>
+        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+          <h2 style={{
+            fontSize: '3rem',
+            fontWeight: 800,
+            color: '#1E293B',
+            marginBottom: '1rem',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            letterSpacing: '-0.02em'
+          }}>
+            Platform <span style={{
+              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Features</span>
+          </h2>
+          <p style={{
+            fontSize: '1.15rem',
+            color: '#64748B',
+            maxWidth: '700px',
+            margin: '0 auto',
+            lineHeight: '1.8',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+          }}>
+            A comprehensive suite of clinically validated tools designed for
+            effective concussion assessment and rehabilitation.
+          </p>
+        </div>
 
         <div style={{
           display: 'grid',
@@ -112,63 +99,74 @@ export const Features: React.FC = () => {
             <div
               key={index}
               style={{
-                backgroundColor: '#1a1a2e',
-                padding: '2rem',
-                borderRadius: '8px',
-                border: '1px solid #2266cc',
-                transition: 'all 0.3s',
-                cursor: 'pointer'
+                backgroundColor: 'white',
+                padding: '2.5rem',
+                borderRadius: '24px',
+                border: '1px solid #E2E8F0',
+                transition: 'all 0.4s',
+                cursor: 'pointer',
+                position: 'relative',
+                overflow: 'hidden'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.borderColor = '#4488ff';
-                e.currentTarget.style.boxShadow = '0 10px 30px rgba(34, 102, 204, 0.3)';
+                e.currentTarget.style.transform = 'translateY(-12px)';
+                e.currentTarget.style.boxShadow = '0 25px 50px rgba(59, 130, 246, 0.2)';
+                e.currentTarget.style.borderColor = 'transparent';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = '#2266cc';
                 e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.borderColor = '#E2E8F0';
               }}
             >
               <div style={{
-                fontSize: '3rem',
-                marginBottom: '1rem',
-                textAlign: 'center'
+                width: '70px',
+                height: '70px',
+                borderRadius: '16px',
+                background: feature.gradient,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '2rem',
+                marginBottom: '1.5rem',
+                boxShadow: '0 10px 30px rgba(59, 130, 246, 0.2)'
               }}>
                 {feature.icon}
               </div>
               <h3 style={{
                 fontSize: '1.5rem',
-                color: '#4488ff',
+                color: '#1E293B',
                 marginBottom: '1rem',
-                fontFamily: 'monospace',
-                textAlign: 'center'
+                fontWeight: 700,
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
                 {feature.title}
               </h3>
               <p style={{
                 fontSize: '1rem',
-                color: '#b0b0b0',
+                color: '#64748B',
                 lineHeight: '1.7',
-                fontFamily: 'monospace',
                 marginBottom: '1.5rem',
-                textAlign: 'center'
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
                 {feature.description}
               </p>
               <ul style={{
                 listStyle: 'none',
                 padding: 0,
-                margin: 0
+                margin: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem'
               }}>
                 {feature.details.map((detail, idx) => (
                   <li
                     key={idx}
                     style={{
                       fontSize: '0.95rem',
-                      color: '#88aaff',
-                      fontFamily: 'monospace',
-                      marginBottom: '0.5rem',
+                      color: '#3B82F6',
+                      fontWeight: 500,
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       paddingLeft: '1.5rem',
                       position: 'relative'
                     }}
@@ -176,7 +174,7 @@ export const Features: React.FC = () => {
                     <span style={{
                       position: 'absolute',
                       left: 0,
-                      color: '#4488ff'
+                      fontWeight: 700
                     }}>✓</span>
                     {detail}
                   </li>
@@ -186,78 +184,91 @@ export const Features: React.FC = () => {
           ))}
         </div>
 
-        {/* Additional Info Section */}
         <div style={{
-          backgroundColor: '#1a1a2e',
-          padding: '3rem',
-          borderRadius: '8px',
-          border: '1px solid #2266cc',
-          textAlign: 'center'
+          padding: '4rem',
+          background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
+          borderRadius: '24px',
+          textAlign: 'center',
+          border: '1px solid #E2E8F0'
         }}>
           <h3 style={{
-            fontSize: '1.75rem',
-            color: '#e0e0e0',
+            fontSize: '2rem',
+            color: '#1E293B',
             marginBottom: '1.5rem',
-            fontFamily: 'monospace'
+            fontWeight: 800,
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
           }}>
-            Built on Proven Science
+            Trusted by Healthcare Professionals
           </h3>
           <p style={{
             fontSize: '1.1rem',
-            color: '#b0b0b0',
+            color: '#64748B',
             lineHeight: '1.8',
-            fontFamily: 'monospace',
             maxWidth: '800px',
-            margin: '0 auto 2rem'
+            margin: '0 auto 3rem',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
           }}>
-            Our platform implements clinical protocols validated through peer-reviewed research
-            and used by healthcare professionals worldwide. Every assessment and therapy module
-            is grounded in evidence-based medicine.
+            Our platform implements clinical protocols validated through peer-reviewed research.
+            Every assessment and therapy module is grounded in evidence-based medicine.
           </p>
           <div style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '3rem',
-            flexWrap: 'wrap',
-            marginTop: '2rem'
+            gap: '4rem',
+            flexWrap: 'wrap'
           }}>
             <div>
               <div style={{
-                fontSize: '2rem',
-                fontWeight: 'bold',
-                color: '#4488ff',
-                fontFamily: 'monospace'
+                fontSize: '2.5rem',
+                fontWeight: 800,
+                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                marginBottom: '0.5rem'
               }}>VOMS</div>
               <div style={{
-                fontSize: '0.9rem',
-                color: '#b0b0b0',
-                fontFamily: 'monospace'
+                fontSize: '0.95rem',
+                color: '#64748B',
+                fontWeight: 500,
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>Assessment Protocol</div>
             </div>
             <div>
               <div style={{
-                fontSize: '2rem',
-                fontWeight: 'bold',
-                color: '#4488ff',
-                fontFamily: 'monospace'
+                fontSize: '2.5rem',
+                fontWeight: 800,
+                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                marginBottom: '0.5rem'
               }}>King-Devick</div>
               <div style={{
-                fontSize: '0.9rem',
-                color: '#b0b0b0',
-                fontFamily: 'monospace'
+                fontSize: '0.95rem',
+                color: '#64748B',
+                fontWeight: 500,
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>Rapid Eye Test</div>
             </div>
             <div>
               <div style={{
-                fontSize: '2rem',
-                fontWeight: 'bold',
-                color: '#4488ff',
-                fontFamily: 'monospace'
+                fontSize: '2.5rem',
+                fontWeight: 800,
+                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                marginBottom: '0.5rem'
               }}>WebXR</div>
               <div style={{
-                fontSize: '0.9rem',
-                color: '#b0b0b0',
-                fontFamily: 'monospace'
+                fontSize: '0.95rem',
+                color: '#64748B',
+                fontWeight: 500,
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>VR Technology</div>
             </div>
           </div>

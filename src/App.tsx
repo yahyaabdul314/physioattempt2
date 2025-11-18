@@ -28,9 +28,9 @@ function App() {
   // Otherwise show landing page with VR entry button
   return (
     <div style={{
-      fontFamily: 'monospace',
-      background: '#0a0a0a',
-      color: '#e0e0e0',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      background: '#FFFFFF',
+      color: '#1E293B',
       minHeight: '100vh',
       margin: 0,
       padding: 0

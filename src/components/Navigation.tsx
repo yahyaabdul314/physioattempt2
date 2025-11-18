@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface NavigationProps {
   onEnterVR: () => void;
 }
 
 export const Navigation: React.FC<NavigationProps> = ({ onEnterVR }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -18,115 +28,81 @@ export const Navigation: React.FC<NavigationProps> = ({ onEnterVR }) => {
       top: 0,
       left: 0,
       right: 0,
-      backgroundColor: 'rgba(10, 10, 10, 0.95)',
-      backdropFilter: 'blur(10px)',
-      padding: '1rem 2rem',
+      backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.8)',
+      backdropFilter: 'blur(12px)',
+      padding: scrolled ? '1rem 2rem' : '1.5rem 2rem',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
       zIndex: 1000,
-      borderBottom: '1px solid #2266cc'
+      boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.08)' : 'none',
+      transition: 'all 0.3s ease'
     }}>
       <div style={{
-        fontSize: '1.25rem',
-        fontWeight: 'bold',
-        color: '#4488ff',
-        fontFamily: 'monospace'
+        fontSize: '1.5rem',
+        fontWeight: 700,
+        background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        letterSpacing: '-0.02em'
       }}>
         NeuroRecover VR
       </div>
 
       <div style={{
         display: 'flex',
-        gap: '2rem',
+        gap: '2.5rem',
         alignItems: 'center'
       }}>
-        <button
-          onClick={() => scrollToSection('about')}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#e0e0e0',
-            cursor: 'pointer',
-            fontSize: '1rem',
-            fontFamily: 'monospace',
-            transition: 'color 0.2s'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.color = '#4488ff'}
-          onMouseLeave={(e) => e.currentTarget.style.color = '#e0e0e0'}
-        >
-          About
-        </button>
-
-        <button
-          onClick={() => scrollToSection('approach')}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#e0e0e0',
-            cursor: 'pointer',
-            fontSize: '1rem',
-            fontFamily: 'monospace',
-            transition: 'color 0.2s'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.color = '#4488ff'}
-          onMouseLeave={(e) => e.currentTarget.style.color = '#e0e0e0'}
-        >
-          Approach
-        </button>
-
-        <button
-          onClick={() => scrollToSection('features')}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#e0e0e0',
-            cursor: 'pointer',
-            fontSize: '1rem',
-            fontFamily: 'monospace',
-            transition: 'color 0.2s'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.color = '#4488ff'}
-          onMouseLeave={(e) => e.currentTarget.style.color = '#e0e0e0'}
-        >
-          Features
-        </button>
-
-        <button
-          onClick={() => scrollToSection('contact')}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#e0e0e0',
-            cursor: 'pointer',
-            fontSize: '1rem',
-            fontFamily: 'monospace',
-            transition: 'color 0.2s'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.color = '#4488ff'}
-          onMouseLeave={(e) => e.currentTarget.style.color = '#e0e0e0'}
-        >
-          Contact
-        </button>
+        {['About', 'Approach', 'Features', 'Contact'].map((item) => (
+          <button
+            key={item}
+            onClick={() => scrollToSection(item.toLowerCase())}
+            style={{
+              background: 'none',
+              border: 'none',
+              color: '#64748B',
+              cursor: 'pointer',
+              fontSize: '0.95rem',
+              fontWeight: 500,
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              transition: 'color 0.2s',
+              position: 'relative'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+            onMouseLeave={(e) => e.currentTarget.style.color = '#64748B'}
+          >
+            {item}
+          </button>
+        ))}
 
         <button
           onClick={onEnterVR}
           style={{
-            padding: '0.75rem 1.5rem',
-            backgroundColor: '#2266cc',
+            padding: '0.75rem 1.75rem',
+            background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
             color: 'white',
             border: 'none',
-            borderRadius: '4px',
+            borderRadius: '12px',
             cursor: 'pointer',
-            fontSize: '1rem',
-            fontWeight: 'bold',
-            fontFamily: 'monospace',
-            transition: 'background-color 0.2s'
+            fontSize: '0.95rem',
+            fontWeight: 600,
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            transition: 'all 0.3s',
+            boxShadow: '0 4px 14px rgba(59, 130, 246, 0.4)'
           }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3377dd'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2266cc'}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 6px 20px rgba(59, 130, 246, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 14px rgba(59, 130, 246, 0.4)';
+          }}
         >
-          ENTER VR MODE
+          Launch VR Mode
         </button>
       </div>
     </nav>

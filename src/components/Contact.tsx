@@ -11,7 +11,6 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send data to a backend
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setTimeout(() => {
@@ -34,143 +33,207 @@ export const Contact: React.FC = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       padding: '6rem 2rem',
-      backgroundColor: '#1a1a2e'
+      backgroundColor: '#F8FAFC'
     }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',
         width: '100%'
       }}>
-        <h2 style={{
-          fontSize: '3rem',
-          fontWeight: 'bold',
-          color: '#e0e0e0',
-          marginBottom: '3rem',
-          fontFamily: 'monospace',
-          textAlign: 'center'
-        }}>
-          Get In <span style={{ color: '#4488ff' }}>Touch</span>
-        </h2>
+        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+          <h2 style={{
+            fontSize: '3rem',
+            fontWeight: 800,
+            color: '#1E293B',
+            marginBottom: '1rem',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            letterSpacing: '-0.02em'
+          }}>
+            Get In <span style={{
+              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Touch</span>
+          </h2>
+          <p style={{
+            fontSize: '1.15rem',
+            color: '#64748B',
+            maxWidth: '700px',
+            margin: '0 auto',
+            lineHeight: '1.8',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+          }}>
+            Ready to transform concussion recovery at your facility?
+            Let's discuss how NeuroRecover VR can help.
+          </p>
+        </div>
 
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-          gap: '4rem',
+          gap: '3rem',
           alignItems: 'start'
         }}>
           {/* Contact Info */}
           <div>
-            <h3 style={{
-              fontSize: '1.75rem',
-              color: '#e0e0e0',
-              marginBottom: '1.5rem',
-              fontFamily: 'monospace'
-            }}>
-              Contact Information
-            </h3>
-            <p style={{
-              fontSize: '1.1rem',
-              color: '#b0b0b0',
-              lineHeight: '1.8',
-              fontFamily: 'monospace',
+            <div style={{
+              backgroundColor: 'white',
+              padding: '3rem',
+              borderRadius: '24px',
+              border: '1px solid #E2E8F0',
               marginBottom: '2rem'
             }}>
-              Interested in implementing our VR concussion recovery platform at your clinic
-              or healthcare facility? Have questions about our technology? We'd love to hear from you.
-            </p>
-
-            <div style={{
-              marginBottom: '4rem'
-            }}>
-              <div style={{
+              <h3 style={{
+                fontSize: '1.75rem',
+                color: '#1E293B',
                 marginBottom: '1.5rem',
-                display: 'flex',
-                alignItems: 'start',
-                gap: '1rem'
+                fontWeight: 700,
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>
-                <div style={{
-                  fontSize: '1.5rem'
-                }}>📧</div>
-                <div>
-                  <h4 style={{
-                    fontSize: '1.1rem',
-                    color: '#4488ff',
-                    marginBottom: '0.25rem',
-                    fontFamily: 'monospace'
-                  }}>Email</h4>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: '#b0b0b0',
-                    fontFamily: 'monospace'
-                  }}>info@neurorecover-vr.com</p>
-                </div>
-              </div>
+                Contact Information
+              </h3>
+              <p style={{
+                fontSize: '1.05rem',
+                color: '#64748B',
+                lineHeight: '1.8',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                marginBottom: '2rem'
+              }}>
+                Interested in bringing our VR platform to your clinic? We'd love to hear from you.
+              </p>
 
               <div style={{
-                marginBottom: '1.5rem',
                 display: 'flex',
-                alignItems: 'start',
-                gap: '1rem'
+                flexDirection: 'column',
+                gap: '1.5rem'
               }}>
                 <div style={{
-                  fontSize: '1.5rem'
-                }}>📞</div>
-                <div>
-                  <h4 style={{
-                    fontSize: '1.1rem',
-                    color: '#4488ff',
-                    marginBottom: '0.25rem',
-                    fontFamily: 'monospace'
-                  }}>Phone</h4>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: '#b0b0b0',
-                    fontFamily: 'monospace'
-                  }}>+1 (555) 123-4567</p>
-                </div>
-              </div>
-
-              <div style={{
-                marginBottom: '1.5rem',
-                display: 'flex',
-                alignItems: 'start',
-                gap: '1rem'
-              }}>
-                <div style={{
-                  fontSize: '1.5rem'
-                }}>🏢</div>
-                <div>
-                  <h4 style={{
-                    fontSize: '1.1rem',
-                    color: '#4488ff',
-                    marginBottom: '0.25rem',
-                    fontFamily: 'monospace'
-                  }}>Office</h4>
-                  <p style={{
-                    fontSize: '1rem',
-                    color: '#b0b0b0',
-                    fontFamily: 'monospace',
-                    lineHeight: '1.6'
+                  display: 'flex',
+                  alignItems: 'start',
+                  gap: '1rem'
+                }}>
+                  <div style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '12px',
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.25rem',
+                    flexShrink: 0
                   }}>
-                    123 Healthcare Innovation Blvd<br />
-                    Suite 400<br />
-                    San Francisco, CA 94105
-                  </p>
+                    📧
+                  </div>
+                  <div>
+                    <h4 style={{
+                      fontSize: '1.1rem',
+                      color: '#1E293B',
+                      marginBottom: '0.25rem',
+                      fontWeight: 600,
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                    }}>Email</h4>
+                    <p style={{
+                      fontSize: '1rem',
+                      color: '#64748B',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                    }}>contact@neurorecover-vr.com</p>
+                  </div>
+                </div>
+
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'start',
+                  gap: '1rem'
+                }}>
+                  <div style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '12px',
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.25rem',
+                    flexShrink: 0
+                  }}>
+                    📞
+                  </div>
+                  <div>
+                    <h4 style={{
+                      fontSize: '1.1rem',
+                      color: '#1E293B',
+                      marginBottom: '0.25rem',
+                      fontWeight: 600,
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                    }}>Phone</h4>
+                    <p style={{
+                      fontSize: '1rem',
+                      color: '#64748B',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                    }}>+1 (555) 123-4567</p>
+                  </div>
+                </div>
+
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'start',
+                  gap: '1rem'
+                }}>
+                  <div style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '12px',
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.25rem',
+                    flexShrink: 0
+                  }}>
+                    🏢
+                  </div>
+                  <div>
+                    <h4 style={{
+                      fontSize: '1.1rem',
+                      color: '#1E293B',
+                      marginBottom: '0.25rem',
+                      fontWeight: 600,
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                    }}>Office</h4>
+                    <p style={{
+                      fontSize: '1rem',
+                      color: '#64748B',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      lineHeight: '1.6'
+                    }}>
+                      123 Healthcare Innovation Blvd<br />
+                      Suite 400<br />
+                      San Francisco, CA 94105
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div>
+            <div style={{
+              backgroundColor: 'white',
+              padding: '2rem',
+              borderRadius: '20px',
+              border: '1px solid #E2E8F0'
+            }}>
               <h4 style={{
                 fontSize: '1.25rem',
-                color: '#e0e0e0',
+                color: '#1E293B',
                 marginBottom: '1rem',
-                fontFamily: 'monospace'
+                fontWeight: 700,
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
               }}>Office Hours</h4>
               <p style={{
                 fontSize: '1rem',
-                color: '#b0b0b0',
-                fontFamily: 'monospace',
+                color: '#64748B',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 lineHeight: '1.8'
               }}>
                 Monday - Friday: 9:00 AM - 6:00 PM PST<br />
@@ -181,53 +244,55 @@ export const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div style={{
-            backgroundColor: '#0a0a0a',
-            padding: '2.5rem',
-            borderRadius: '8px',
-            border: '1px solid #2266cc'
+            backgroundColor: 'white',
+            padding: '3rem',
+            borderRadius: '24px',
+            border: '1px solid #E2E8F0'
           }}>
             <h3 style={{
-              fontSize: '1.5rem',
-              color: '#e0e0e0',
+              fontSize: '1.75rem',
+              color: '#1E293B',
               marginBottom: '1.5rem',
-              fontFamily: 'monospace'
+              fontWeight: 700,
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
             }}>
-              Send us a message
+              Send Us a Message
             </h3>
 
             {submitted ? (
               <div style={{
-                padding: '2rem',
-                backgroundColor: '#1a4d1a',
-                borderRadius: '4px',
-                border: '1px solid #2d8b2d',
-                textAlign: 'center'
+                padding: '3rem',
+                background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                borderRadius: '16px',
+                textAlign: 'center',
+                color: 'white'
               }}>
                 <div style={{
-                  fontSize: '3rem',
+                  fontSize: '3.5rem',
                   marginBottom: '1rem'
                 }}>✓</div>
                 <h4 style={{
-                  fontSize: '1.25rem',
-                  color: '#4ade80',
-                  fontFamily: 'monospace'
+                  fontSize: '1.5rem',
+                  fontWeight: 700,
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                  marginBottom: '0.5rem'
                 }}>Message Sent!</h4>
                 <p style={{
                   fontSize: '1rem',
-                  color: '#a3e6a3',
-                  fontFamily: 'monospace',
-                  marginTop: '0.5rem'
-                }}>We'll get back to you soon.</p>
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                  opacity: 0.95
+                }}>We'll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: '1.5rem' }}>
                   <label style={{
                     display: 'block',
-                    fontSize: '1rem',
-                    color: '#b0b0b0',
+                    fontSize: '0.95rem',
+                    color: '#1E293B',
                     marginBottom: '0.5rem',
-                    fontFamily: 'monospace'
+                    fontWeight: 600,
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                   }}>
                     Name *
                   </label>
@@ -239,28 +304,35 @@ export const Contact: React.FC = () => {
                     required
                     style={{
                       width: '100%',
-                      padding: '0.75rem',
-                      backgroundColor: '#1a1a2e',
-                      border: '1px solid #2266cc',
-                      borderRadius: '4px',
-                      color: '#e0e0e0',
+                      padding: '0.875rem',
+                      backgroundColor: '#F8FAFC',
+                      border: '2px solid #E2E8F0',
+                      borderRadius: '12px',
+                      color: '#1E293B',
                       fontSize: '1rem',
-                      fontFamily: 'monospace',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       outline: 'none',
-                      transition: 'border-color 0.2s'
+                      transition: 'all 0.2s'
                     }}
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#4488ff'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#2266cc'}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = '#3B82F6';
+                      e.currentTarget.style.backgroundColor = 'white';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = '#E2E8F0';
+                      e.currentTarget.style.backgroundColor = '#F8FAFC';
+                    }}
                   />
                 </div>
 
                 <div style={{ marginBottom: '1.5rem' }}>
                   <label style={{
                     display: 'block',
-                    fontSize: '1rem',
-                    color: '#b0b0b0',
+                    fontSize: '0.95rem',
+                    color: '#1E293B',
                     marginBottom: '0.5rem',
-                    fontFamily: 'monospace'
+                    fontWeight: 600,
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                   }}>
                     Email *
                   </label>
@@ -272,28 +344,35 @@ export const Contact: React.FC = () => {
                     required
                     style={{
                       width: '100%',
-                      padding: '0.75rem',
-                      backgroundColor: '#1a1a2e',
-                      border: '1px solid #2266cc',
-                      borderRadius: '4px',
-                      color: '#e0e0e0',
+                      padding: '0.875rem',
+                      backgroundColor: '#F8FAFC',
+                      border: '2px solid #E2E8F0',
+                      borderRadius: '12px',
+                      color: '#1E293B',
                       fontSize: '1rem',
-                      fontFamily: 'monospace',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       outline: 'none',
-                      transition: 'border-color 0.2s'
+                      transition: 'all 0.2s'
                     }}
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#4488ff'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#2266cc'}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = '#3B82F6';
+                      e.currentTarget.style.backgroundColor = 'white';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = '#E2E8F0';
+                      e.currentTarget.style.backgroundColor = '#F8FAFC';
+                    }}
                   />
                 </div>
 
                 <div style={{ marginBottom: '1.5rem' }}>
                   <label style={{
                     display: 'block',
-                    fontSize: '1rem',
-                    color: '#b0b0b0',
+                    fontSize: '0.95rem',
+                    color: '#1E293B',
                     marginBottom: '0.5rem',
-                    fontFamily: 'monospace'
+                    fontWeight: 600,
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                   }}>
                     Organization
                   </label>
@@ -304,28 +383,35 @@ export const Contact: React.FC = () => {
                     onChange={handleChange}
                     style={{
                       width: '100%',
-                      padding: '0.75rem',
-                      backgroundColor: '#1a1a2e',
-                      border: '1px solid #2266cc',
-                      borderRadius: '4px',
-                      color: '#e0e0e0',
+                      padding: '0.875rem',
+                      backgroundColor: '#F8FAFC',
+                      border: '2px solid #E2E8F0',
+                      borderRadius: '12px',
+                      color: '#1E293B',
                       fontSize: '1rem',
-                      fontFamily: 'monospace',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       outline: 'none',
-                      transition: 'border-color 0.2s'
+                      transition: 'all 0.2s'
                     }}
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#4488ff'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#2266cc'}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = '#3B82F6';
+                      e.currentTarget.style.backgroundColor = 'white';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = '#E2E8F0';
+                      e.currentTarget.style.backgroundColor = '#F8FAFC';
+                    }}
                   />
                 </div>
 
                 <div style={{ marginBottom: '1.5rem' }}>
                   <label style={{
                     display: 'block',
-                    fontSize: '1rem',
-                    color: '#b0b0b0',
+                    fontSize: '0.95rem',
+                    color: '#1E293B',
                     marginBottom: '0.5rem',
-                    fontFamily: 'monospace'
+                    fontWeight: 600,
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                   }}>
                     Message *
                   </label>
@@ -337,19 +423,25 @@ export const Contact: React.FC = () => {
                     rows={6}
                     style={{
                       width: '100%',
-                      padding: '0.75rem',
-                      backgroundColor: '#1a1a2e',
-                      border: '1px solid #2266cc',
-                      borderRadius: '4px',
-                      color: '#e0e0e0',
+                      padding: '0.875rem',
+                      backgroundColor: '#F8FAFC',
+                      border: '2px solid #E2E8F0',
+                      borderRadius: '12px',
+                      color: '#1E293B',
                       fontSize: '1rem',
-                      fontFamily: 'monospace',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       outline: 'none',
                       resize: 'vertical',
-                      transition: 'border-color 0.2s'
+                      transition: 'all 0.2s'
                     }}
-                    onFocus={(e) => e.currentTarget.style.borderColor = '#4488ff'}
-                    onBlur={(e) => e.currentTarget.style.borderColor = '#2266cc'}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = '#3B82F6';
+                      e.currentTarget.style.backgroundColor = 'white';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = '#E2E8F0';
+                      e.currentTarget.style.backgroundColor = '#F8FAFC';
+                    }}
                   />
                 </div>
 
@@ -358,20 +450,27 @@ export const Contact: React.FC = () => {
                   style={{
                     width: '100%',
                     padding: '1rem',
-                    backgroundColor: '#2266cc',
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
                     color: 'white',
                     border: 'none',
-                    borderRadius: '4px',
+                    borderRadius: '12px',
                     cursor: 'pointer',
-                    fontSize: '1.1rem',
-                    fontWeight: 'bold',
-                    fontFamily: 'monospace',
-                    transition: 'background-color 0.2s'
+                    fontSize: '1.05rem',
+                    fontWeight: 600,
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    transition: 'all 0.3s',
+                    boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3377dd'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2266cc'}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(59, 130, 246, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(59, 130, 246, 0.3)';
+                  }}
                 >
-                  SEND MESSAGE
+                  Send Message
                 </button>
               </form>
             )}
