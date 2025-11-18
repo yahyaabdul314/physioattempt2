@@ -248,9 +248,18 @@ export class RecoveryProtocolManager {
   generateSummary(protocol: RecoveryProtocol): {
     protocolId: string;
     patientId: string;
-    progress: ReturnType<typeof this.calculateProgress>;
+    progress: {
+      weekProgress: number;
+      sessionProgress: number;
+      daysElapsed: number;
+      sessionsCompleted: number;
+      totalPlannedSessions: number;
+    };
     successRate: number;
-    readyToProgress: ReturnType<typeof this.isReadyToProgress>;
+    readyToProgress: {
+      ready: boolean;
+      reasons: string[];
+    };
     assessmentImprovement: {
       initialSymptoms: number;
       currentSymptoms: number;
