@@ -36,7 +36,6 @@ export default defineConfig({
             '--disable-features=IsolateOrigins,site-per-process',
           ],
         },
-        permissions: ['xr-spatial-tracking'],
       },
     },
   ],
