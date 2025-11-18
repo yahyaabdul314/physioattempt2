@@ -3,7 +3,7 @@
  * Tests for VR symptom rating interface (0-10 scale)
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { SymptomRating } from '../SymptomRating';
 import { useAssessmentStore } from '../../store/assessmentStore';
@@ -37,7 +37,7 @@ describe('SymptomRating', () => {
     });
 
     it('should render plus and minus buttons for each symptom', () => {
-      const { container } = render(<SymptomRating />);
+      render(<SymptomRating />);
 
       const plusButtons = screen.getAllByText('+');
       const minusButtons = screen.getAllByText('-');
@@ -70,7 +70,7 @@ describe('SymptomRating', () => {
     });
 
     it('should have plus button disabled when score is 10', () => {
-      const { container } = render(<SymptomRating />);
+      render(<SymptomRating />);
 
       // Plus buttons should exist
       const plusButtons = screen.getAllByText('+');
@@ -158,17 +158,10 @@ describe('SymptomRating', () => {
     });
 
     it('should call updateSymptoms when continuing', () => {
-      const updateSymptomsSpy = vi.spyOn(
-        useAssessmentStore.getState(),
-        'updateSymptoms'
-      );
+      render(<SymptomRating />);
 
-      const { container } = render(<SymptomRating />);
-
-      // Find continue button and click it
-      const button = container.querySelector('mesh[onClick]');
       // Button exists in the component
-      expect(container).toBeTruthy();
+      expect(screen.getByText('Rate Your Symptoms')).toBeInTheDocument();
     });
 
     it('should progress to next test after smooth pursuits', () => {
@@ -176,8 +169,6 @@ describe('SymptomRating', () => {
       store.startAssessment('test-patient');
       store.startTest('smoothPursuits');
       store.completeTest();
-
-      const startTestSpy = vi.spyOn(store, 'startTest');
 
       render(<SymptomRating />);
 
@@ -190,8 +181,6 @@ describe('SymptomRating', () => {
       store.startAssessment('test-patient');
       store.startTest('saccadesH');
       store.completeTest();
-
-      const setStateSpy = vi.spyOn(store, 'setState');
 
       render(<SymptomRating />);
 

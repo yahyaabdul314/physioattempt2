@@ -14,7 +14,8 @@ vi.mock('@react-three/fiber', async () => {
     ...actual,
     useFrame: vi.fn((callback) => {
       // Store callback for manual triggering in tests
-      (global as any).__useFrameCallback = callback;
+      (globalThis as any).__useFrameCallback = callback;
+      return null;
     }),
     useThree: vi.fn(() => ({
       camera: { position: { x: 0, y: 0, z: 5 } },
@@ -41,8 +42,8 @@ vi.mock('@react-three/xr', () => ({
 }));
 
 // Mock @react-three/drei
-vi.mock('@react-three/drei', () => {
-  const React = require('react');
+vi.mock('@react-three/drei', async () => {
+  const React = await import('react');
   return {
     Text: ({ children, ...props }: any) =>
       React.createElement('div', { 'data-testid': 'drei-text', ...props }, children),
@@ -52,7 +53,7 @@ vi.mock('@react-three/drei', () => {
 });
 
 // Mock Three.js mesh for refs
-global.mockThreeMesh = () => ({
+(globalThis as any).mockThreeMesh = () => ({
   position: {
     set: vi.fn(),
     x: 0,
@@ -64,9 +65,9 @@ global.mockThreeMesh = () => ({
 });
 
 // Mock requestAnimationFrame for testing
-global.requestAnimationFrame = vi.fn((callback) => {
+(globalThis as any).requestAnimationFrame = vi.fn((callback: (time: number) => void) => {
   callback(0);
   return 0;
 });
 
-global.cancelAnimationFrame = vi.fn();
+(globalThis as any).cancelAnimationFrame = vi.fn();

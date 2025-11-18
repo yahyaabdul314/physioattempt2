@@ -3,7 +3,7 @@
  * Tests for VR start/welcome screen
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { StartScreen } from '../StartScreen';
 import { useAssessmentStore } from '../../store/assessmentStore';
@@ -75,15 +75,8 @@ describe('StartScreen', () => {
 
   describe('Start Button Interaction', () => {
     it('should call startAssessment when button is clicked', () => {
-      const startAssessmentSpy = vi.spyOn(
-        useAssessmentStore.getState(),
-        'startAssessment'
-      );
+      render(<StartScreen />);
 
-      const { container } = render(<StartScreen />);
-
-      // Find the start button
-      const button = container.querySelector('mesh[onClick]');
       // Button should exist
       expect(screen.getByText('START TESTS')).toBeInTheDocument();
     });
@@ -96,9 +89,6 @@ describe('StartScreen', () => {
     });
 
     it('should transition to instructions state', () => {
-      const store = useAssessmentStore.getState();
-      const startAssessmentSpy = vi.spyOn(store, 'startAssessment');
-
       render(<StartScreen />);
 
       // After clicking start, should move to instructions

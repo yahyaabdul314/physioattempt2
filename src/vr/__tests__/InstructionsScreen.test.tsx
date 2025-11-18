@@ -3,7 +3,7 @@
  * Tests for VOMS instructions screen
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { InstructionsScreen } from '../InstructionsScreen';
 import { useAssessmentStore } from '../../store/assessmentStore';
@@ -141,20 +141,12 @@ describe('InstructionsScreen', () => {
 
   describe('Begin Button Interaction', () => {
     it('should call startTest when begin button is clicked', () => {
-      const startTestSpy = vi.spyOn(
-        useAssessmentStore.getState(),
-        'startTest'
-      );
-
       render(<InstructionsScreen />);
 
       expect(screen.getByText('BEGIN ASSESSMENT')).toBeInTheDocument();
     });
 
     it('should start with smooth pursuits test', () => {
-      const store = useAssessmentStore.getState();
-      const startTestSpy = vi.spyOn(store, 'startTest');
-
       render(<InstructionsScreen />);
 
       // Should start with smoothPursuits when begin is clicked

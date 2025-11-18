@@ -19,6 +19,7 @@ describe('SmoothPursuitsTest', () => {
     // Capture useFrame callback
     vi.mocked(useFrame).mockImplementation((callback) => {
       frameCallback = callback;
+      return null;
     });
   });
 
@@ -184,9 +185,6 @@ describe('SmoothPursuitsTest', () => {
     it('should move target during horizontal phase', () => {
       const { container } = render(<SmoothPursuitsTest />);
 
-      // Get initial mesh state
-      const initialHTML = container.innerHTML;
-
       // Simulate some animation frames
       act(() => {
         if (frameCallback) {
@@ -197,8 +195,6 @@ describe('SmoothPursuitsTest', () => {
       });
 
       // Target position should update
-      const updatedHTML = container.innerHTML;
-      // HTML might change due to position updates
       expect(container).toBeTruthy();
     });
 
@@ -444,7 +440,6 @@ describe('SmoothPursuitsTest', () => {
     it('should provide clear phase information', () => {
       render(<SmoothPursuitsTest />);
 
-      const phases = ['horizontal', 'vertical', 'diagonal'];
       expect(screen.getByText(/Phase: horizontal/)).toBeInTheDocument();
     });
 

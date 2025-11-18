@@ -3,7 +3,7 @@
  * Tests for assessment completion and results screen
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { CompleteScreen } from '../CompleteScreen';
 import { useAssessmentStore } from '../../store/assessmentStore';
@@ -218,8 +218,6 @@ describe('CompleteScreen', () => {
 
   describe('Restart Functionality', () => {
     it('should call reset when restart button is clicked', () => {
-      const resetSpy = vi.spyOn(useAssessmentStore.getState(), 'reset');
-
       render(<CompleteScreen />);
 
       expect(screen.getByText('RESTART ASSESSMENT')).toBeInTheDocument();
@@ -229,8 +227,6 @@ describe('CompleteScreen', () => {
       const store = useAssessmentStore.getState();
       store.startAssessment('test-patient');
       store.setState('complete');
-
-      const resetSpy = vi.spyOn(store, 'reset');
 
       render(<CompleteScreen />);
 

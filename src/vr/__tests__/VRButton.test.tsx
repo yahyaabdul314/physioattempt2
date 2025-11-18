@@ -302,7 +302,7 @@ describe('VRButton', () => {
     });
 
     it('should position text in front of button', () => {
-      const { container } = render(
+      render(
         <VRButton
           position={[0, 0, 0]}
           onClick={onClickMock}

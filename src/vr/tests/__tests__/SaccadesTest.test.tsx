@@ -19,6 +19,7 @@ describe('SaccadesTest', () => {
     // Capture useFrame callback
     vi.mocked(useFrame).mockImplementation((callback) => {
       frameCallback = callback;
+      return null;
     });
   });
 
@@ -342,7 +343,7 @@ describe('SaccadesTest', () => {
 
   describe('Performance', () => {
     it('should complete full test cycle within reasonable time', () => {
-      const { container } = render(<SaccadesTest />);
+      render(<SaccadesTest />);
 
       const startTime = Date.now();
 
