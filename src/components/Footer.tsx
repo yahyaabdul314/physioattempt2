@@ -24,10 +24,7 @@ export const Footer: React.FC = () => {
             <h3 style={{
               fontSize: '1.5rem',
               fontWeight: 700,
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: '#0066CC',
               marginBottom: '1rem'
             }}>
               NeuroRecover VR
@@ -50,7 +47,7 @@ export const Footer: React.FC = () => {
                   width: '40px',
                   height: '40px',
                   borderRadius: '10px',
-                  background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                  background: '#0066CC',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -60,10 +57,12 @@ export const Footer: React.FC = () => {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.4)';
+                  e.currentTarget.style.backgroundColor = '#0052A3';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 102, 204, 0.4)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.backgroundColor = '#0066CC';
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
@@ -75,7 +74,7 @@ export const Footer: React.FC = () => {
                   width: '40px',
                   height: '40px',
                   borderRadius: '10px',
-                  background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                  background: '#0066CC',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -85,10 +84,12 @@ export const Footer: React.FC = () => {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.4)';
+                  e.currentTarget.style.backgroundColor = '#0052A3';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 102, 204, 0.4)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.backgroundColor = '#0066CC';
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
@@ -100,7 +101,7 @@ export const Footer: React.FC = () => {
                   width: '40px',
                   height: '40px',
                   borderRadius: '10px',
-                  background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+                  background: '#0066CC',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -110,10 +111,12 @@ export const Footer: React.FC = () => {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.4)';
+                  e.currentTarget.style.backgroundColor = '#0052A3';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 102, 204, 0.4)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.backgroundColor = '#0066CC';
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
@@ -157,7 +160,7 @@ export const Footer: React.FC = () => {
                       transition: 'color 0.2s',
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#0066CC'}
                     onMouseLeave={(e) => e.currentTarget.style.color = '#94A3B8'}
                   >
                     {link}
@@ -195,7 +198,7 @@ export const Footer: React.FC = () => {
                       fontSize: '0.95rem',
                       transition: 'color 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#0066CC'}
                     onMouseLeave={(e) => e.currentTarget.style.color = '#94A3B8'}
                   >
                     {link}
@@ -233,7 +236,7 @@ export const Footer: React.FC = () => {
                       fontSize: '0.95rem',
                       transition: 'color 0.2s'
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#0066CC'}
                     onMouseLeave={(e) => e.currentTarget.style.color = '#94A3B8'}
                   >
                     {link}
@@ -263,7 +266,7 @@ export const Footer: React.FC = () => {
               lineHeight: '1.7',
               margin: 0
             }}>
-              <strong style={{ color: '#3B82F6' }}>Clinical Disclaimer:</strong> This platform is designed to supplement, not replace,
+              <strong style={{ color: '#0066CC' }}>Clinical Disclaimer:</strong> This platform is designed to supplement, not replace,
               professional medical care. VR-based assessments should be conducted under the guidance of
               qualified healthcare providers. Not all users may be suitable for VR therapy. Always consult
               with your healthcare provider before beginning any rehabilitation program.
@@ -295,10 +298,7 @@ export const Footer: React.FC = () => {
             }}>
               <span>Built with</span>
               <span style={{
-                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#0066CC',
                 fontWeight: 600
               }}>React + Three.js + WebXR</span>
             </p>

@@ -52,10 +52,7 @@ export const Approach: React.FC = () => {
             letterSpacing: '-0.02em'
           }}>
             Our <span style={{
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              color: '#0066CC'
             }}>Methodology</span>
           </h2>
           <p style={{
@@ -92,8 +89,8 @@ export const Approach: React.FC = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateX(8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(59, 130, 246, 0.15)';
-                e.currentTarget.style.borderColor = '#3B82F6';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 102, 204, 0.15)';
+                e.currentTarget.style.borderColor = '#0066CC';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateX(0)';
@@ -115,7 +112,7 @@ export const Approach: React.FC = () => {
                 <div style={{
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  color: '#3B82F6',
+                  color: '#0066CC',
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                 }}>
                   {step.number}
@@ -147,7 +144,7 @@ export const Approach: React.FC = () => {
         <div style={{
           marginTop: '5rem',
           padding: '3rem',
-          background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+          background: '#0066CC',
           borderRadius: '24px',
           textAlign: 'center',
           color: 'white'

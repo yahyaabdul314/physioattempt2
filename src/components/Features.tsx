@@ -6,42 +6,42 @@ export const Features: React.FC = () => {
       icon: '👁️',
       title: 'Oculomotor Assessment',
       description: 'Comprehensive testing of smooth pursuits, saccades, convergence, and vestibulo-ocular reflex function with real-time tracking.',
-      gradient: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
+      gradient: '#0066CC',
       details: ['Real-time eye tracking', 'Automated symptom recording', 'Baseline comparison analytics']
     },
     {
       icon: '⚖️',
       title: 'Vestibular Rehabilitation',
       description: 'Evidence-based exercises for balance, gaze stabilization, and spatial orientation recovery in immersive environments.',
-      gradient: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
+      gradient: '#00897B',
       details: ['Dynamic visual acuity', 'Gaze stabilization', 'Balance training modules']
     },
     {
       icon: '📈',
       title: 'Progress Analytics',
       description: 'Detailed tracking and visualization of recovery metrics with exportable clinical reports for healthcare providers.',
-      gradient: 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)',
+      gradient: '#0096C7',
       details: ['Session tracking', 'Symptom trend analysis', 'Clinical report generation']
     },
     {
       icon: '🎮',
       title: 'Immersive VR Therapy',
       description: 'Engaging virtual environments make rehabilitation exercises more enjoyable and clinically effective.',
-      gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+      gradient: '#43A047',
       details: ['WebXR compatibility', 'Adjustable difficulty', 'Safe virtual environments']
     },
     {
       icon: '🔐',
       title: 'HIPAA Compliant',
       description: 'Enterprise-grade security with encrypted data storage ensuring complete patient privacy and regulatory compliance.',
-      gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+      gradient: '#FB8C00',
       details: ['Encrypted storage', 'Secure authentication', 'Privacy-first design']
     },
     {
       icon: '🌐',
       title: 'Web-Based Platform',
       description: 'No downloads required. Instant access from any VR-capable device with a modern web browser.',
-      gradient: 'linear-gradient(135deg, #EC4899 0%, #DB2777 100%)',
+      gradient: '#5E35B1',
       details: ['Cross-platform support', 'Instant accessibility', 'Regular updates']
     }
   ];
@@ -70,10 +70,7 @@ export const Features: React.FC = () => {
             letterSpacing: '-0.02em'
           }}>
             Platform <span style={{
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              color: '#0066CC'
             }}>Features</span>
           </h2>
           <p style={{
@@ -110,7 +107,7 @@ export const Features: React.FC = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-12px)';
-                e.currentTarget.style.boxShadow = '0 25px 50px rgba(59, 130, 246, 0.2)';
+                e.currentTarget.style.boxShadow = '0 25px 50px rgba(0, 102, 204, 0.2)';
                 e.currentTarget.style.borderColor = 'transparent';
               }}
               onMouseLeave={(e) => {
@@ -164,7 +161,7 @@ export const Features: React.FC = () => {
                     key={idx}
                     style={{
                       fontSize: '0.95rem',
-                      color: '#3B82F6',
+                      color: '#0066CC',
                       fontWeight: 500,
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       paddingLeft: '1.5rem',
@@ -221,10 +218,7 @@ export const Features: React.FC = () => {
               <div style={{
                 fontSize: '2.5rem',
                 fontWeight: 800,
-                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#0066CC',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 marginBottom: '0.5rem'
               }}>VOMS</div>
@@ -239,10 +233,7 @@ export const Features: React.FC = () => {
               <div style={{
                 fontSize: '2.5rem',
                 fontWeight: 800,
-                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#0066CC',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 marginBottom: '0.5rem'
               }}>King-Devick</div>
@@ -257,10 +248,7 @@ export const Features: React.FC = () => {
               <div style={{
                 fontSize: '2.5rem',
                 fontWeight: 800,
-                background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#0066CC',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 marginBottom: '0.5rem'
               }}>WebXR</div>

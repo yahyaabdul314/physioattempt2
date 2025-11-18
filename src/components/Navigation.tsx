@@ -41,10 +41,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onEnterVR }) => {
       <div style={{
         fontSize: '1.5rem',
         fontWeight: 700,
-        background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
+        color: '#0066CC',
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         letterSpacing: '-0.02em'
       }}>
@@ -71,7 +68,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onEnterVR }) => {
               transition: 'color 0.2s',
               position: 'relative'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#0066CC'}
             onMouseLeave={(e) => e.currentTarget.style.color = '#64748B'}
           >
             {item}
@@ -82,7 +79,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onEnterVR }) => {
           onClick={onEnterVR}
           style={{
             padding: '0.75rem 1.75rem',
-            background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+            background: '#0066CC',
             color: 'white',
             border: 'none',
             borderRadius: '12px',
@@ -91,15 +88,17 @@ export const Navigation: React.FC<NavigationProps> = ({ onEnterVR }) => {
             fontWeight: 600,
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             transition: 'all 0.3s',
-            boxShadow: '0 4px 14px rgba(59, 130, 246, 0.4)'
+            boxShadow: '0 4px 14px rgba(0, 102, 204, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 6px 20px rgba(59, 130, 246, 0.6)';
+            e.currentTarget.style.backgroundColor = '#0052A3';
+            e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 102, 204, 0.4)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 4px 14px rgba(59, 130, 246, 0.4)';
+            e.currentTarget.style.backgroundColor = '#0066CC';
+            e.currentTarget.style.boxShadow = '0 4px 14px rgba(0, 102, 204, 0.3)';
           }}
         >
           Launch VR Mode

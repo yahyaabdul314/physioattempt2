@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
         right: '10%',
         width: '300px',
         height: '300px',
-        background: 'radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(0, 102, 204, 0.08) 0%, transparent 70%)',
         borderRadius: '50%',
         filter: 'blur(40px)'
       }} />
@@ -35,7 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
         left: '5%',
         width: '400px',
         height: '400px',
-        background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(0, 150, 199, 0.06) 0%, transparent 70%)',
         borderRadius: '50%',
         filter: 'blur(60px)'
       }} />
@@ -50,13 +50,13 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
           alignItems: 'center',
           gap: '0.5rem',
           padding: '0.5rem 1.25rem',
-          backgroundColor: 'rgba(59, 130, 246, 0.1)',
-          border: '1px solid rgba(59, 130, 246, 0.2)',
+          backgroundColor: 'rgba(0, 102, 204, 0.08)',
+          border: '1px solid rgba(0, 102, 204, 0.2)',
           borderRadius: '50px',
           marginBottom: '2rem',
           fontSize: '0.9rem',
           fontWeight: 500,
-          color: '#3B82F6',
+          color: '#0066CC',
           fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
         }}>
           <span style={{
@@ -77,10 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
           The Future of
           <br />
           <span style={{
-            background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
+            color: '#0066CC'
           }}>
             Concussion Recovery
           </span>
@@ -112,7 +109,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
             onClick={onEnterVR}
             style={{
               padding: '1.1rem 2.75rem',
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+              background: '#0066CC',
               color: 'white',
               border: 'none',
               borderRadius: '14px',
@@ -121,18 +118,20 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
               fontWeight: 600,
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               transition: 'all 0.3s',
-              boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)',
+              boxShadow: '0 10px 30px rgba(0, 102, 204, 0.25)',
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 15px 40px rgba(59, 130, 246, 0.4)';
+              e.currentTarget.style.backgroundColor = '#0052A3';
+              e.currentTarget.style.boxShadow = '0 15px 40px rgba(0, 102, 204, 0.35)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(59, 130, 246, 0.3)';
+              e.currentTarget.style.backgroundColor = '#0066CC';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 102, 204, 0.25)';
             }}
           >
             <span style={{ fontSize: '1.3rem' }}>🥽</span>
@@ -147,7 +146,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
             style={{
               padding: '1.1rem 2.75rem',
               backgroundColor: 'white',
-              color: '#3B82F6',
+              color: '#0066CC',
               border: '2px solid #E2E8F0',
               borderRadius: '14px',
               cursor: 'pointer',
@@ -158,7 +157,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
               boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#3B82F6';
+              e.currentTarget.style.borderColor = '#0066CC';
               e.currentTarget.style.backgroundColor = '#F8FAFC';
               e.currentTarget.style.transform = 'translateY(-3px)';
               e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.1)';
@@ -190,10 +189,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
             <div style={{
               fontSize: '3rem',
               fontWeight: 800,
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: '#0066CC',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               marginBottom: '0.5rem'
             }}>87+</div>
@@ -208,10 +204,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
             <div style={{
               fontSize: '3rem',
               fontWeight: 800,
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: '#0066CC',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               marginBottom: '0.5rem'
             }}>100%</div>
@@ -226,10 +219,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
             <div style={{
               fontSize: '3rem',
               fontWeight: 800,
-              background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: '#0066CC',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               marginBottom: '0.5rem'
             }}>WebXR</div>
@@ -253,7 +243,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterVR }) => {
       }}>
         <div style={{
           fontSize: '2rem',
-          color: '#3B82F6',
+          color: '#0066CC',
           opacity: 0.6
         }}>↓</div>
       </div>
